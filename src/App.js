@@ -12,13 +12,11 @@ class App extends React.Component{
             monsters : [],
             searchField:''
         };
-        this.handleChange = this.handleChange.bind(this);
     }
 
 
-    // When you call new method of class then you should write down here
-    // and declare in construct this method class
-    handleChange(e){
+    // you can write down class method as this way not declaring by bind in the constructor
+    handleChange = (e) => {
         this.setState({searchField:e.target.value})
     }
 
