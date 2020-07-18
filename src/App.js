@@ -12,7 +12,14 @@ class App extends React.Component{
             monsters : [],
             searchField:''
         };
+        this.handleChange = this.handleChange.bind(this);
+    }
 
+
+    // When you call new method of class then you should write down here
+    // and declare in construct this method class
+    handleChange(e){
+        this.setState({searchField:e.target.value})
     }
 
 
@@ -31,8 +38,7 @@ class App extends React.Component{
                 <div className="App">
                     <SearchBox
                         placeholder="Search monsters"
-                        handleChange={e =>
-                            this.setState({searchField:e.target.value})}
+                        handleChange={this.handleChange}
                     />
                     <CardList monsters={filteredMonsters} />
                 </div>
