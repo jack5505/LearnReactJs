@@ -18,7 +18,13 @@ class App extends React.Component{
     // you can write down class method as this way not declaring by bind in the constructor
     handleChange = (e) => {
         this.setState({searchField:e.target.value})
-    }
+    };
+
+
+    handleIt = () => {
+
+    };
+    // bigelow
 
 
     componentDidMount() {
@@ -34,6 +40,7 @@ class App extends React.Component{
         );
         return (
                 <div className="App">
+                    <h1>Monster Rolodex</h1>
                     <SearchBox
                         placeholder="Search monsters"
                         handleChange={this.handleChange}
